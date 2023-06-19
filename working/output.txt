@@ -1,0 +1,22 @@
+● wpa_supplicant.service - WPA supplicant
+     Loaded: loaded (/usr/lib/systemd/system/wpa_supplicant.service; disabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Thu 2023-04-27 20:40:16 CEST; 12h ago
+   Main PID: 901 (wpa_supplicant)
+      Tasks: 1 (limit: 4417)
+     Memory: 5.0M
+        CPU: 1.627s
+     CGroup: /system.slice/wpa_supplicant.service
+             └─901 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -u -s
+
+Apr 28 08:46:57 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Apr 28 08:46:57 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=13 -> NAK
+Apr 28 08:46:57 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=25
+Apr 28 08:46:57 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-EAP-METHOD EAP vendor 0 method 25 (PEAP) selected
+Apr 28 08:46:57 fedora wpa_supplicant[901]: SSL: SSL3 alert: write (local SSL3 detected an error):fatal:protocol version
+Apr 28 08:46:57 fedora wpa_supplicant[901]: OpenSSL: openssl_handshake - SSL_connect error:0A000102:SSL routines::unsupported protocol
+Apr 28 08:46:59 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-EAP-FAILURE EAP authentication failed
+Apr 28 08:46:59 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-DISCONNECTED bssid=d8:84:66:85:87:a2 reason=23
+Apr 28 08:46:59 fedora wpa_supplicant[901]: wlp0s12f0: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="eduroam" auth_failures=1 duration=10 reason=AUTH_FAILED
+Apr 28 08:46:59 fedora wpa_supplicant[901]: BSSID d8:84:66:85:87:a2 ignore list count incremented to 2, ignoring for 10 seconds
